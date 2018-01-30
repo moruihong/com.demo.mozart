@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MozartTest</string>
+
+    <string name="details_ms">"%1$02d:%2$02d"</string>
+    <string name="details_hms">"%1$02d:%2$02d:%3$02d"</string>
+    <string name="details_hms_2">"%1$02d : %2$02d : %3$02d"</string>
+
+</resources>

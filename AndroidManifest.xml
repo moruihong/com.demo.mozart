@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.demo.mozart"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.RemoteService"/>
+    <!--<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE"/>
+
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="23"/>
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SeekBarTestActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize">
+        </activity>
+        <activity
+            android:name=".activity.AnimationActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize">
+        </activity>
+        <activity
+            android:name=".activity.ViewTestActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize">
+        </activity>
+        <activity
+            android:name=".activity.ShareTestActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.OthersActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.ServiceTestActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service
+            android:name=".services.MyService"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize"
+            android:process=":service"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.demo.mozart.services.MyService"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name=".services.MyReceiver"
+            android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+            <intent-filter>
+                <action android:name="oppo.intent.action.ROM_UPDATE_CONFIG_SUCCESS"/>
+                <action android:name="android.intent.action.OPPO_BOOT_COMPLETED"/>
+                <action android:name="action_create_app_list_database"/>
+                <action android:name="action_upgrade_app_list_database"/>
+                <action android:name="android.intent.action.OPPO_OTA_UPDATE_SUCCESSED"/>
+                <action android:name="android.intent.action.OPPO_RECOVER_UPDATE_SUCCESSED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".activity.ProviderTestActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

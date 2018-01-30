@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/ob1"
+        style="@style/CodeFont"
+        android:onClick="onClick"
+        android:text="vibrate" />
+
+    <Button
+        android:id="@+id/ob2"
+        style="@style/CodeFont"
+        android:onClick="onClick"
+        android:text="share" />
+
+</LinearLayout>

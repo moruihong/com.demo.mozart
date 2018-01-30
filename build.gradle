@@ -1,0 +1,206 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        maven {
+            url prop_oppoMavenUrl
+
+            credentials {
+                username sonatypeUsername
+                password sonatypeUsername
+            }
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${prop_gradleVersion}"
+        classpath "com.oppo.plugin:oppo-native-dependencies:${prop_oppoNativeDependenciesVersion}"
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url prop_oppoMavenUrl
+
+            credentials {
+                username sonatypeUsername
+                password sonatypeUsername
+            }
+        }
+    }
+}
+
+//compile app use application
+apply plugin: 'com.android.application'
+
+//compile library project use library
+//apply plugin: 'com.android.library'
+
+//depends on so files in remote repositories use oppo-native-dependencies
+apply plugin: 'oppo-native-dependencies'
+
+
+android {
+    compileSdkVersion prop_compileSdkVersion
+    buildToolsVersion prop_buildToolsVersion
+
+    signingConfigs {
+
+        platform {
+            storeFile file("${prop_keyPath}/platform.keystore")
+            keyAlias 'androidplatformkey'
+            keyPassword prop_keyPassword
+            storePassword prop_storePassword
+        }
+
+        media {
+            storeFile file("${prop_keyPath}/media.keystore")
+            keyAlias 'androidmediakey'
+            keyPassword prop_keyPassword
+            storePassword prop_storePassword
+        }
+
+        shared {
+            storeFile file("${prop_keyPath}/shared.keystore")
+            keyAlias 'androidsharedkey'
+            keyPassword prop_keyPassword
+            storePassword prop_storePassword
+        }
+
+        testkey {
+            storeFile file("${prop_keyPath}/testkey.keystore")
+            keyAlias 'androidtestkeykey'
+            keyPassword prop_keyPassword
+            storePassword prop_storePassword
+        }
+    }
+
+
+    defaultConfig {
+        minSdkVersion    23
+        targetSdkVersion 25
+
+        archivesBaseName = prop_archivesBaseName
+
+        if (project.hasProperty('prop_disableSubPackage') && prop_disableSubPackage.toBoolean()) {
+            println("app disable resource subpacakge")
+        } else {
+            if (project.hasProperty('prop_resConfigs') && !prop_resConfigs.toString().isEmpty()) {
+                resConfigs prop_resConfigs
+            } else {
+                println("subpacakge config is empty, no subpackage")
+            }
+        }
+        manifestPlaceholders = [ versionCommit:"${prop_versionCommit}",versionDate:"${prop_versionDate}" ]
+    }
+
+    buildTypes {
+        release {
+
+            //config signing type
+            signingConfig signingConfigs.platform
+
+            //config enable proGuard
+            minifyEnabled false
+
+            //config enable shrink unused resources
+            shrinkResources false
+
+            //proGuard rules files
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+        }
+
+        //add for Exp
+        releaseExp {
+            initWith(buildTypes.release)
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+
+            //if apply plugin: 'oppo-native-dependencies' and libs as the default jniLibs folder,libs will be clean up
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+
+        //add for Exp
+        releaseExp.setRoot('build-types/releaseExp')
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    aaptOptions {
+        additionalParameters "-I","${sdkDirectory}/platforms/${compileSdkVersion}/oppo-framework-res.apk"
+    }
+
+    compileOptions {
+        encoding 'UTF-8'
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+
+dependencies {
+    //depends on library project
+    //compile project(':part3:OppoPrivateMusicPage')
+
+    //provided only compile,not pacakge
+    //provided files('libs/coloros.support.jar')
+
+    //list jar one by one
+    //compile files('libs/env.jar')
+    //compile files('libs/libs_bugly_1.2.7_release.jar')
+
+    //include all jars in libs
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    //depends on jar in remote repositories, format is 'group:name:version'
+    //compile 'com.coloros.support:coloros.support:1.0.0-SNAPSHOT'
+    //compile 'com.coloros.romupdate:romupdate-bugly:1.0.0-SNAPSHOT'
+    //compile 'com.coloros.bugly:bugly_1.2.7_release:1.2.7'
+    //compile 'com.coloros:compatibility:1.0.0'
+    //compile 'com.coloros.statistics:statistics:1.0.0-SNAPSHOT'
+    //compile 'com.oppo.exif:exif:1.0.0-SNAPSHOT'
+    //you can also put jars in user-libs,which created by yourself
+    //compile files('user-libs/com.coloros.statistics.jar')
+    //compile fileTree(include: ['*.jar'], dir: 'user-libs')
+}
+
+/*native_dependencies {
+    artifact 'com.coloros.bugly:libBugly:1.2.7-armeabi:armeabi'
+    artifact 'com.oppo.media.breakpad:libbreakpadManager_jni:1.0.0-armeabi-SNAPSHOT:armeabi'
+}*/
+/*native_dependencies {
+    artifact 'com.coloros.commons:libcoloros_common_gaussianblur:1.0.0-armeabi-SNAPSHOT:armeabi'
+    artifact 'com.coloros.commons:libcoloros_common_gaussianblur:1.0.0-arm64-v8a-SNAPSHOT:arm64-v8a'
+
+    artifact ('com.coloros.bugly:libBugly:1.2.7-arm64-v8a:arm64-v8a') {
+        //add prefix lib to downloaded so files,default is false
+        addLibPrefixToArtifact=true
+    }
+}*/

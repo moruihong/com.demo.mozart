@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appNames>
+
+    <appName>
+        <packageName>com.android.mms</packageName>
+        <className>com.android.mms.ui.ComposeMessageActivity</className>
+        <labelName>信息</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.android.bluetooth</packageName>
+        <className>com.android.bluetooth.opp.BluetoothOppLauncherActivity</className>
+        <labelName>蓝牙</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.oppo.community</packageName>
+        <className>com.oppo.community.sendpost.PostFromShareActivity</className>
+        <labelName>OPPO乐园</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.tencent.mobileqq</packageName>
+        <className>com.tencent.mobileqq.activity.JumpActivity</className>
+        <labelName>发送给好友</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.sina.weibo</packageName>
+        <className>com.sina.weibo.composerinde.ComposerDispatchActivity</className>
+        <labelName>微博</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.tencent.mobileqq</packageName>
+        <className>com.tencent.mobileqq.activity.qfileJumpActivity</className>
+        <labelName>发送到我的电脑</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.tencent.mobileqq</packageName>
+        <className>cooperation.qqfav.widget.QfavJumpActivity</className>
+        <labelName>保存到QQ收藏</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.tencent.mm</packageName>
+        <className>com.tencent.mm.ui.tools.ShareImgUI</className>
+        <labelName>发送给朋友</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.tencent.mm</packageName>
+        <className>com.tencent.mm.ui.tools.AddFavoriteUI</className>
+        <labelName>添加到微信收藏</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.android.email</packageName>
+        <className>com.kingsoft.email.activity.ComposeActivityEmail</className>
+        <labelName>电子邮件</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.demo.mozart</packageName>
+        <className>com.demo.mozart.ShareTestActivity</className>
+        <labelName>微信朋友圈</labelName>
+    </appName>
+
+</appNames>

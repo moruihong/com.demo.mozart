@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/myactivity_b1"
+        style="@style/CodeFont"
+        android:onClick="onClick"
+        android:text="开启我的服务"/>
+
+    <Button
+        android:id="@+id/myactivity_b2"
+        style="@style/CodeFont"
+        android:onClick="onClick"
+        android:text="关闭我的服务"/>
+
+    <Button
+        android:id="@+id/myactivity_b3"
+        style="@style/CodeFont"
+        android:onClick="onClick"
+        android:text="查看我的服务的状态"/>
+
+    <TextView
+        android:id="@+id/myactivity_t3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

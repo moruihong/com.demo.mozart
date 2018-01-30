@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="sohu_popup_dialog_height">415dip</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- add by ctq 2013-03-02 -->
+    <dimen name="min_miniplayer_width">200dip</dimen>
+    <!-- add by ctq end -->
+    <dimen name="control_bar_left_margin_port">0dip</dimen>
+    <dimen name="control_bar_right_margin_port">0dip</dimen>
+    <dimen name="subview_layout_height_land">60dip</dimen>
+    <dimen name="subview_layout_height_port">171dip</dimen>
+    <!-- <dimen name="tvs_name_size">210dip</dimen> -->
+    <!-- For Search -->
+    <!-- <dimen name="player_top_control_time_size">16sp</dimen> -->
+    <dimen name="use_network_cb_margin_bottom">15dip</dimen>
+    <dimen name="use_network_cb_margin_left">17dip</dimen>
+    <dimen name="use_network_cb_margin_right">17dip</dimen>
+    <dimen name="use_network_cb_margin_top">15dip</dimen>
+    <dimen name="thumb_bookmark_icon_width">104dip</dimen>
+    <dimen name="thumb_bookmark_icon_height">65.3dip</dimen>
+    <dimen name="bookmarkicon_width">30dip</dimen>
+    <dimen name="bookmarkicon_height">30dip</dimen>
+    <dimen name="video_list_item_margin_left">15dip</dimen>
+    <dimen name="video_list_item_margin_right">10dip</dimen>
+    <dimen name="video_rename_dialog_height">63dp</dimen>
+    <dimen name="video_rename_dialog_edit_height">40dp</dimen>
+    <dimen name="video_rename_dialog_edit_margin_left">12dp</dimen>
+    <dimen name="video_rename_dialog_edit_margin_right">12dp</dimen>
+    <dimen name="video_rename_dialog_edit_margin_bottom">11dp</dimen>
+    <dimen name="video_rename_dialog_edit_margin_top">11dp</dimen>
+    <dimen name="video_rename_dialog_edit_padding_left">4dp</dimen>
+    <dimen name="video_rename_dialog_edit_padding_right">20dp</dimen>
+    <dimen name="video_rename_dialog_edit_flush_margin_right">14dip</dimen>
+    <dimen name="channel_news_list_adapter_item_padding_left">15dip</dimen>
+    <dimen name="channel_news_list_adapter_item_padding_right">9dip</dimen>
+    <dimen name="list_child_item_horizontal_space">7dip</dimen>
+    <dimen name="oppo_dialog_width">341dp</dimen>
+    <!-- Voice Search -->
+    <!-- <dimen name="main_microphone_height">145dip</dimen> -->
+    <dimen name="my_video_fragment_title_height">44dip</dimen>
+    <dimen name="recommend_fragment_left_right_margin">10dip</dimen>
+    <dimen name="recommend_fragment_grid_item_title_text_size">13dip</dimen>
+    <dimen name="image_view_border_size">0.3dip</dimen>
+    <dimen name="popup_window_bottom_line_height">2.8dip</dimen>
+    <dimen name="fling_gesture_x_offset">20dip</dimen>
+    <dimen name="fling_gesture_y_offset">80dip</dimen>
+    <dimen name="title_bar_title_bottom_padding">0.5dip</dimen>
+    <dimen name="title_bar_title_text_size">18dip</dimen>
+    <dimen name="episode_grid_item_border_size">0.3dip</dimen>
+    <dimen name="video_source_button_margin_right">8dip</dimen>
+    <dimen name="online_play_seek_bar_height">2dip</dimen>
+    <dimen name="online_play_seek_bar_border_size">0dip</dimen>
+    <dimen name="online_play_seek_bar_radius_size">0dip</dimen>
+    <dimen name="online_play_full_screen_top_bar_height">41dip</dimen>
+    <dimen name="online_play_full_screen_bottom_bar_height">47dip</dimen>
+    <dimen name="online_play_full_screen_top_bar_padding_top">21dip</dimen>
+    <dimen name="online_play_full_screen_bottom_bar_padding_top">0dip</dimen>
+    <dimen name="online_play_full_screen_bottom_bar_padding_top_nav_bar">-25dip</dimen>
+    <dimen name="full_screen_top_bar_option_button_inter_space">15dip</dimen>
+    <dimen name="full_screen_top_bar_option_button_edge_space">15dip</dimen>
+    <dimen name="full_screen_bottom_bar_space">0dip</dimen>
+    <dimen name="full_screen_top_bar_option_button_inter_space_port">15dip</dimen>
+    <dimen name="full_screen_top_bar_option_button_edge_space_port">15dip</dimen>
+    <dimen name="full_screen_bottom_bar_space_port">40dip</dimen>
+    <dimen name="online_play_volume_bright_icon_width">46.7dip</dimen>
+    <dimen name="online_play_volume_bright_icon_height">46.7dip</dimen>
+
+    <dimen name="local_video_list_item_height">80dip</dimen>
+    <dimen name="local_video_list_item_title_text_size">16sp</dimen>
+    <dimen name="local_video_list_item_summary_text_size">12sp</dimen>
+    <dimen name="prefrence_widget_layout_width">50dip</dimen>
+    <dimen name="feedback_reminder_text_size">10dip</dimen>
+    <dimen name="height">307dip</dimen>
+
+</resources>

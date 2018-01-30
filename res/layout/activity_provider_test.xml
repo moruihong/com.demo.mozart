@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/b1"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="读悬浮窗状态"/>
+
+        <Button
+            android:id="@+id/b2"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="写悬浮窗状态"/>
+
+        <Button
+            android:id="@+id/b3"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="读自启动状态"/>
+
+        <Button
+            android:id="@+id/b4"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="写自启动状态"/>
+
+        <Button
+            android:id="@+id/b5"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="读关联启动状态"/>
+
+        <Button
+            android:id="@+id/b6"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="写关联启动状态"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统一要写入的状态："/>
+
+            <Switch
+                android:id="@+id/my_switch_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

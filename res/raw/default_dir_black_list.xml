@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <version>20161026</version>
+    <isOpen>1</isOpen>
+    <filter-name>mediascanner-blacklist</filter-name>
+    <string-array>
+        <item>/Tencent/MicroMsg/T/image2</item>
+        <item>/Tencent/MicroMsg/T/voice2</item>
+        <item>/ABC/Tencent/MicroMsg/T/image2</item>
+        <item>/Android/data/com.tencent.mobileqq/qzone/cache</item>
+        <item>/.ColorOSGalleryRecycler</item>
+        <item>/Tencent/MobileQQ/qbiz/html5</item>
+        <item>/mipush/log</item>
+        <item>/.estrongs</item>
+    </string-array>
+    <config>
+        <maxDir>10</maxDir>
+        <maxDepthDir>10</maxDepthDir>
+        <minFileCnt>100</minFileCnt>
+        <minDirDepth>10</minDirDepth>
+        <maxDepthDirToCnt>4</maxDepthDirToCnt>
+        <dataReportPeriod>2</dataReportPeriod>
+        <maxFilePathLengthToIgnore>1000</maxFilePathLengthToIgnore>
+        <maxFileDirDepthToIgnore>20</maxFileDirDepthToIgnore>
+    </config>
+</filter-conf>

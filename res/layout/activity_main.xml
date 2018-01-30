@@ -1,0 +1,49 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/b0"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="Others"/>
+
+        <Button
+            android:id="@+id/b1"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="SeekBar"/>
+
+        <Button
+            android:id="@+id/b2"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="Animation"/>
+
+        <Button
+            android:id="@+id/b3"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="ViewTest"/>
+
+        <Button
+            android:id="@+id/b4"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="ServiceTest"/>
+
+        <Button
+            android:id="@+id/b5"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="ProviderTest"/>
+
+    </LinearLayout>
+
+</ScrollView>

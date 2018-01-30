@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appNames>
+
+    <appName>
+        <packageName>com.tencent.mm</packageName>
+        <className>com.tencent.mm.ui.tools.ShareImgUI</className>
+        <labelName>发送给朋友</labelName>
+    </appName>
+
+    <appName>
+        <packageName>com.tencent.mm</packageName>
+        <className>com.tencent.mm.ui.tools.AddFavoriteUI</className>
+        <labelName>添加到微信收藏</labelName>
+    </appName>
+</appNames>
