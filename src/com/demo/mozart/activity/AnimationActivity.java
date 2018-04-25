@@ -37,12 +37,7 @@ public class AnimationActivity extends Activity implements View.OnClickListener 
         mPlayLoadingAnimation = new PlayLoadingAnimation();
         mPlayLoadingView = (ImageView) this.findViewById(R.id.play_loading);
         mPlayLoadingAnimation.addView(mPlayLoadingView);
-        mPlayLoadingAnimation.startAlbumRotate();
-
-        mPlayLoadingAnimation1 = new PlayLoadingAnimation1();
-        mPlayLoadingView1 = (ImageView) this.findViewById(R.id.play_loading1);
-        mPlayLoadingAnimation1.addView(mPlayLoadingView1, getWindowManager().getDefaultDisplay().getWidth());
-        mPlayLoadingAnimation1.startAlbumRotate();*/
+        mPlayLoadingAnimation.startAlbumRotate();*/
     }
 
     @Override

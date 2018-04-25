@@ -27,6 +27,12 @@
             android:text="Animation"/>
 
         <Button
+            android:id="@+id/b2_1"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="Animation2_1"/>
+
+        <Button
             android:id="@+id/b3"
             style="@style/CodeFont"
             android:onClick="onClick"

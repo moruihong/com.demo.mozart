@@ -41,9 +41,10 @@ public class ProviderTestActivity extends Activity implements View.OnClickListen
     public static final String METHOD_SET_STARTUP_STATE = "setStartupState";
     public static final String METHOD_GET_ASSOCIATE_START_STATE = "getAssociateStartState";
     public static final String METHOD_SET_ASSOCIATE_START_STATE = "setAssociateStartState";
-    private String[] testArray = {"com.tencent.research.drop", "com.baidu.BaiduMap", "com.coloros.safecenter",
-            "com.UCMobile", "com.youku.phone", "com.tencent.qqlive",
-            "com.taobao.taobao", "com.tencent.reading", "com.sina.weibo"
+    private String[] testArray = {
+            /*"com.coloros.safecenter", "com.autonavi.minimap", "com.tencent.research.drop",
+            "com.baidu.BaiduMap", "com.UCMobile", "com.youku.phone", "com.tencent.qqlive", "com.taobao.taobao",
+            "com.tencent.reading", "com.sina.weibo",*/ "com.coloros.weather"
     };
 
     private Toast mToast;
@@ -210,8 +211,10 @@ public class ProviderTestActivity extends Activity implements View.OnClickListen
         Set<String> keys = result.keySet();
         int count = 0;
         for (String pkg : pkgArray) {
+            String key = pkg.concat("_canBeOpened");
             if (keys.contains(pkg)) {
-                builder.append("\n").append(++count).append("  ").append(pkg).append("  ").append(result.get(pkg));
+                builder.append("\n").append(++count).append("  ").append(pkg).append("  ").append(result.get(pkg))
+                        .append("  ").append(result.get(key));
             } else {
                 builder.append("\n").append(++count).append("  ").append(pkg).append("  ").append("null");
             }

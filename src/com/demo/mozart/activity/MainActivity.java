@@ -33,6 +33,9 @@ public class MainActivity extends BaseActivity implements OnClickListener {
             case R.id.b2:
                 doClick(AnimationActivity.class);
                 break;
+            case R.id.b2_1:
+                doClick(Animation2Activity.class);
+                break;
             case R.id.b3:
                 doClick(ViewTestActivity.class);
                 break;
