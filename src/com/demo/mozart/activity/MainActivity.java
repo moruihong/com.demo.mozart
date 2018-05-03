@@ -45,6 +45,9 @@ public class MainActivity extends BaseActivity implements OnClickListener {
             case R.id.b5:
                 doClick(ProviderTestActivity.class);
                 break;
+            case R.id.b6:
+                doClick(ProviderTestActivity2.class);
+                break;
         }
     }
 

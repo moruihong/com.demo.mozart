@@ -102,6 +102,11 @@
             android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".activity.ProviderTestActivity2"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

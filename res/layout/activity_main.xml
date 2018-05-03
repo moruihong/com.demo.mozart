@@ -50,6 +50,12 @@
             android:onClick="onClick"
             android:text="ProviderTest"/>
 
+        <Button
+            android:id="@+id/b6"
+            style="@style/CodeFont"
+            android:onClick="onClick"
+            android:text="ProviderTest2"/>
+
     </LinearLayout>
 
 </ScrollView>
